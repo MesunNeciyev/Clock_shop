@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Clock_Shop.Models.Clock>
+
+
+
+
+
+
+
+<h1>Welcome to our Story</h1>
+<form method="post">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Buy</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.Name</th>
+                    <th>@item.Brand</th>
+                    <th>@item.Price</th>
+                    <th><a href="/Shopping/Buy" class="btn btn-info">Buy </a></th>
+                    
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</form>
+
